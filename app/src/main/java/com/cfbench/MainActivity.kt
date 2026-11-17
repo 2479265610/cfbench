@@ -8,6 +8,7 @@ import android.text.method.ScrollingMovementMethod
 import android.view.Gravity
 import android.widget.Button
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.LinearLayout
 import android.widget.ScrollView
 import android.widget.TextView
@@ -93,8 +94,8 @@ class MainActivity : AppCompatActivity() {
             movementMethod = ScrollingMovementMethod()
             setTextIsSelectable(true)
         }
-        scroll.addView(logView, ScrollView.LayoutParams(
-            ScrollView.LayoutParams.MATCH_PARENT, ScrollView.LayoutParams.WRAP_CONTENT
+        scroll.addView(logView, FrameLayout.LayoutParams(
+            FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.WRAP_CONTENT
         ))
         root.addView(scroll, LinearLayout.LayoutParams(
             LinearLayout.LayoutParams.MATCH_PARENT, 0, 1f
